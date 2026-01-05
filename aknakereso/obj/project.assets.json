@@ -1242,11 +1242,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\csharp\\aknakereso\\aknakereso\\aknakereso.csproj",
+      "projectUniqueName": "E:\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj",
       "projectName": "aknakereso",
-      "projectPath": "E:\\csharp\\aknakereso\\aknakereso\\aknakereso.csproj",
+      "projectPath": "E:\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj",
       "packagesPath": "C:\\Users\\ondre\\.nuget\\packages\\",
-      "outputPath": "E:\\csharp\\aknakereso\\aknakereso\\obj\\",
+      "outputPath": "E:\\csharp\\minesweeper\\aknakereso\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ondre\\AppData\\Roaming\\NuGet\\NuGet.Config",

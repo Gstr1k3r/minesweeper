@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P+qCCwBt0xE=",
+  "dgSpecHash": "NxCUmuZw6eA=",
   "success": true,
-  "projectFilePath": "E:\\csharp\\aknakereso\\aknakereso\\aknakereso.csproj",
+  "projectFilePath": "E:\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ondre\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\ondre\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0\\microsoft.entityframeworkcore.8.0.0.nupkg.sha512",
@@ -36,9 +36,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'Sitecore.FakeDb 2.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "E:\\csharp\\aknakereso\\aknakereso\\aknakereso.csproj",
+      "projectPath": "E:\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj",
       "warningLevel": 1,
-      "filePath": "E:\\csharp\\aknakereso\\aknakereso\\aknakereso.csproj",
+      "filePath": "E:\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj",
       "libraryId": "Sitecore.FakeDb",
       "targetGraphs": [
         "net8.0-windows7.0"
