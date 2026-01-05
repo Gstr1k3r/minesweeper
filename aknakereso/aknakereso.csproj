@@ -32,4 +32,8 @@
     <Resource Include="Sounds\win.wav" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+
 </Project>

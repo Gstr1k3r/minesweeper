@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Windows;
@@ -24,11 +25,6 @@ namespace Aknakereso
         public MainWindow()
         {
             InitializeComponent();
-
-            using (var db = new GameDbContext())
-            {
-                db.Database.EnsureCreated(); // ha nincs adatbázis vagy tábla, létrehozza
-            }
 
         }
 
@@ -207,7 +203,6 @@ namespace Aknakereso
 
             if (cell.IsMine)
             {
-                PlayExplosionSound();
                 RevealAll();
                 MessageBox.Show("💣 Vesztettél!");
                 timer.Stop();
@@ -215,30 +210,15 @@ namespace Aknakereso
             }
 
             RevealCell(r, c);
-            PlayClickSound();
 
             if (CheckWin())
             {
-                PlayWinSound();
                 timer.Stop();
 
-                // Save successful result to database
-                SaveResult(selectedDifficulty, secondsElapsed);
-
                 MessageBox.Show("🎉 Nyertél!");
-                using (var db = new GameDbContext())
-                {
-                    db.Results.Add(new Result
-                    {
-                        Difficulty = selectedDifficulty, // pl. "Könnyű", "Közepes", "Nehéz"
-                        TimeSeconds = secondsElapsed,
-                        PlayedAt = DateTime.Now
-                    });
-                    db.SaveChanges(); // 🔹 ez kell, különben nem kerül mentésre
-                    Console.WriteLine($"Mentés: {selectedDifficulty}, {secondsElapsed} sec");
-
-                }
-
+                
+                    SaveResult(selectedDifficulty, secondsElapsed, DateTime.Now);
+                    Console.WriteLine($"Mentés: {selectedDifficulty}, {secondsElapsed} sec, {DateTime.Now} időpontban.");          
                 RevealAll();
             }
         }
@@ -328,44 +308,61 @@ namespace Aknakereso
             MineCounter.Text = $"Aknák: {MineCount - flags}";
         }
 
-        // --- HANGOK ---
-        private void PlayClickSound() => PlaySound("Sounds/click.wav");
-        private void PlayExplosionSound() => PlaySound("Sounds/explosion.wav");
-        private void PlayWinSound() => PlaySound("Sounds/win.wav");
-
-        private void PlaySound(string file)
-        {
-            try { new SoundPlayer(file).Play(); }
-            catch { }
-        }
-
         // --- DB: mentés rekord ---
-        private void SaveResult(string difficulty, int timeSeconds)
+        private void SaveResult(string difficulty, int timeSeconds, DateTime now)
         {
             try
             {
-                using var db = new GameDbContext();
-                db.Results.Add(new Result
+                using (StreamWriter sw = new StreamWriter("Database/aknakereso.csv", true))
                 {
-                    Difficulty = difficulty,
-                    TimeSeconds = timeSeconds,
-                    PlayedAt = DateTime.Now
-                });
-                db.SaveChanges();
+                    sw.WriteLine($"{difficulty};{timeSeconds};{now}");
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                // Swallow DB errors so UI isn't blocked; consider logging in real app.
+                MessageBox.Show("Hiba a rekord mentése során!\n" + ex.Message);
             }
         }
+
 
         // --- REKORDOK ABLAK ---
         private void RecordsButton_Click(object sender, RoutedEventArgs e)
         {
-            RecordsWindow w = new RecordsWindow();
-            w.Owner = this;
-            w.ShowDialog();
+            string path = "Database/aknakereso.csv";
+
+            if (!File.Exists(path))
+            {
+                MessageBox.Show("Nincs még elmentett rekord.");
+                return;
+            }
+
+            var lines = File.ReadAllLines(path);
+
+            var records = lines
+                .Select(l => l.Split(';'))
+                .Where(p => p.Length == 3)
+                .Select(p => new
+                {
+                    Difficulty = p[0],
+                    Time = int.Parse(p[1]),
+                    Date = DateTime.Parse(p[2])
+                });
+
+            var bestPerDifficulty = records
+                .GroupBy(r => r.Difficulty)
+                .Select(g => g.OrderBy(r => r.Time).First())
+                .ToList();
+
+            string message = "🏆 Legjobb idők:\n\n";
+
+            foreach (var r in bestPerDifficulty)
+            {
+                message += $"{r.Difficulty}: {r.Time} mp ({r.Date})\n";
+            }
+
+            MessageBox.Show(message, "Rekordok");
         }
+
 
     }
 }
