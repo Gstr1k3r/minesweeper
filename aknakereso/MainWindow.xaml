@@ -1,0 +1,50 @@
+﻿<Window x:Class="Aknakereso.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Aknakereső"
+        Width="900"
+        Height="800"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+
+        <!-- Játék Grid + stat panel -->
+        <DockPanel Margin="10">
+
+            <!-- Felső sáv: stat panel + gombok -->
+            <StackPanel x:Name="StatsPanel"
+                        DockPanel.Dock="Top"
+                        Orientation="Horizontal"
+                        Margin="0,0,0,10"
+                        Visibility="Collapsed">
+
+                <TextBlock VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,5,0"/>
+                <TextBlock x:Name="TimerText" Text="0" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,20,0"/>
+
+                <TextBlock VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,5,0"/>
+                <TextBlock x:Name="MineCounter" Text="0" VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,20,0"/>
+
+                <Button Content="🔄 Új játék" Click="NewGameButton_Click" Margin="0,0,10,0"/>
+                <Button Content="🏆 Rekordok" Click="RecordsButton_Click"/>
+
+            </StackPanel>
+
+            <!-- Játék Grid -->
+            <Grid x:Name="GameGrid" Background="LightGray"/>
+
+        </DockPanel>
+
+        <!-- DifficultyPanel overlay -->
+        <StackPanel x:Name="DifficultyPanel"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="#AAFFFFFF"
+                    Width="250">
+            <TextBlock Text="Aknakereső" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+            <Button Content="Könnyű (8x8, 10 akna)" Click="EasyButton_Click" Margin="0,0,0,10"/>
+            <Button Content="Közepes (16x16, 40 akna)" Click="MediumButton_Click" Margin="0,0,0,10"/>
+            <Button Content="Nehéz (24x24, 99 akna)" Click="HardButton_Click" Margin="0,0,0,10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
