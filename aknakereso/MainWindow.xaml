@@ -39,11 +39,11 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Background="#AAFFFFFF"
-                    Width="250">
-            <TextBlock Text="Aknakereső" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
-            <Button Content="Könnyű (8x8, 10 akna)" Click="EasyButton_Click" Margin="0,0,0,10"/>
-            <Button Content="Közepes (16x16, 40 akna)" Click="MediumButton_Click" Margin="0,0,0,10"/>
-            <Button Content="Nehéz (24x24, 99 akna)" Click="HardButton_Click" Margin="0,0,0,10"/>
+                    Width="500">
+            <TextBlock Text="Aknakereső" FontWeight="Bold" HorizontalAlignment="Center" Margin="10,10,10,10" FontSize="32"/>
+            <Button Content="Könnyű (8x8, 10 akna)" Click="EasyButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24"/>
+            <Button Content="Közepes (16x16, 40 akna)" Click="MediumButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24"/>
+            <Button Content="Nehéz (24x24, 99 akna)" Click="HardButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24"/>
         </StackPanel>
 
     </Grid>

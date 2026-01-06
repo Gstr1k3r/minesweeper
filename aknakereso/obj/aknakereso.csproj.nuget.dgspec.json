@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj": {}
+    "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj": {}
   },
   "projects": {
-    "E:\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj": {
+    "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj",
+        "projectUniqueName": "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj",
         "projectName": "aknakereso",
-        "projectPath": "E:\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj",
-        "packagesPath": "C:\\Users\\ondre\\.nuget\\packages\\",
-        "outputPath": "E:\\csharp\\minesweeper\\aknakereso\\obj\\",
+        "projectPath": "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\aknakereso.csproj",
+        "packagesPath": "C:\\Users\\c1ondger\\.nuget\\packages\\",
+        "outputPath": "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ondre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\c1ondger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -84,7 +89,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
