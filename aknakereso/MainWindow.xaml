@@ -5,6 +5,30 @@
         Width="900"
         Height="800"
         WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+
+        <!-- Alap gomb stílus -->
+        <Style TargetType="Button">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Padding" Value="10,6"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            CornerRadius="10">
+                            <ContentPresenter
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
 
     <Grid>
 
@@ -40,11 +64,11 @@
                     VerticalAlignment="Center"
                     Background="#AAFFFFFF"
                     Width="500">
-            <TextBlock Text="Aknakereső" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10" FontSize="32" />
-            <Button Content="Könnyű (8x8, 10 akna)" Click="EasyButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24"/>
-            <Button Content="Közepes (16x16, 40 akna)" Click="MediumButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24"/>
-            <Button Content="Nehéz (24x24, 99 akna)" Click="HardButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24"/>
-            <Button Content="🏆 Rekordok" Click="RecordsButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24"/>
+            <TextBlock Text="Aknakereső" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10" FontSize="32"/>
+            <Button Content="Könnyű (8x8, 10 akna)" Click="EasyButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24" Background="#4CAF50"/>
+            <Button Content="Közepes (16x16, 40 akna)" Click="MediumButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24" Background="#FF9800"/>
+            <Button Content="Nehéz (24x24, 99 akna)" Click="HardButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24" Background="#F44336"/>
+            <Button Content="🏆 Rekordok" Click="RecordsButton_Click" Margin="20,0,20,10" Width="400" Height="100" FontSize="24" Background="#607D8B"/>
         </StackPanel>
 
     </Grid>

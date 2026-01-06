@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{771020BA-A408-49BE-AC05-F4ED534B8B6C}|aknakereso\\aknakereso.csproj|solutionrelative:aknakereso\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{771020BA-A408-49BE-AC05-F4ED534B8B6C}|aknakereso\\aknakereso.csproj|j:\\2025-26\\csharp\\minesweeper\\aknakereso\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{771020BA-A408-49BE-AC05-F4ED534B8B6C}|aknakereso\\aknakereso.csproj|solutionrelative:aknakereso\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{771020BA-A408-49BE-AC05-F4ED534B8B6C}|aknakereso\\aknakereso.csproj|j:\\2025-26\\csharp\\minesweeper\\aknakereso\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{771020BA-A408-49BE-AC05-F4ED534B8B6C}|aknakereso\\aknakereso.csproj|solutionrelative:aknakereso\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{771020BA-A408-49BE-AC05-F4ED534B8B6C}|aknakereso\\aknakereso.csproj|j:\\2025-26\\csharp\\minesweeper\\aknakereso\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{771020BA-A408-49BE-AC05-F4ED534B8B6C}|aknakereso\\aknakereso.csproj|solutionrelative:aknakereso\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{771020BA-A408-49BE-AC05-F4ED534B8B6C}|aknakereso\\aknakereso.csproj|j:\\2025-26\\csharp\\minesweeper\\aknakereso\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,21 +38,21 @@
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\MainWindow.xaml",
               "RelativeDocumentMoniker": "aknakereso\\MainWindow.xaml",
-              "ToolTip": "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\MainWindow.xaml*",
-              "RelativeToolTip": "aknakereso\\MainWindow.xaml*",
+              "ToolTip": "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\MainWindow.xaml",
+              "RelativeToolTip": "aknakereso\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-01-05T20:33:15.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "aknakereso\\MainWindow.xaml.cs",
               "ToolTip": "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\MainWindow.xaml.cs",
               "RelativeToolTip": "aknakereso\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAwwKYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswCkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-05T19:01:01.171Z",
               "EditorCaption": ""
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameDbContext.cs",
               "DocumentMoniker": "J:\\2025-26\\csharp\\minesweeper\\aknakereso\\GameDbContext.cs",
               "RelativeDocumentMoniker": "aknakereso\\GameDbContext.cs",
